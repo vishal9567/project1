@@ -1,0 +1,68 @@
+{{#if adminlogin}}
+<nav class="navbar navbar-expand-sm navbar-dark" style="background-image: linear-gradient(rgb(34, 32, 32), rgb(52,74,94), black)">
+    <div class="container-fluid">
+         <a class="navbar-brand" href="#" data-toggle="tooltip" data-placement="bottom" title="Admin"><img
+                src="/images/adminIconLogin.png" alt="logo" style="width: 40px;"></a>
+        <h6 class="text-light">Admin Login</h6>
+    </div>
+</nav>
+{{/if}}
+<center class="tag">
+    <h2>{{#if adminlogin}}
+        {{else}}
+        LOG IN
+        {{/if}}
+    </h2>
+</center>
+<div class="maindiv">
+    <form class="containercss" action="{{goto}}" method="POST">
+        <img src="/images/logo.png" alt="logo" width="50px" height="50px">
+        {{#if adminLoginError}}
+        <p class="text-danger">Invalid Entry</p>
+        {{/if}}
+        {{#if userLoginError}}
+        <p class="text-danger">Invalid Entry</p>
+        {{/if}}
+        <div class="insider">
+            <input id="email" type="email" placeholder="Enter Email" name="email" value="vishalmadhu687@gmail.com"><br>
+            <input id="password" type="password" placeholder="Enter Password" name="password" value="vishal123"><br>
+            {{#if adminlogin}}
+            <div class="container bg-danger rounded-pill border border-success d-flex justify-content-between">
+                <a class="text-info" href="/">User</a>
+                <a class="text-info"  href="/admin/adminSignup">SignUp</a>
+            </div>
+            {{else}}
+            <div class="container bg-dark d-flex rounded-pill justify-content-between">
+                <a class="text-info" href="/admin">Admin</a>
+                <a class="text-info"  href="/index">Sign Up</a>
+            </div>
+            {{/if}}
+        </div>
+        {{#if adminlogin}}
+        <input type="submit"
+            style="border-radius: 20px;background-color: #1875e0;color: rgb(220, 224, 224);width: 100px; padding: 5px;border: none;"
+            value="Log In">
+        {{else}}
+        <input type="submit"
+            style="border-radius: 20px;background-color: #1875e0;color: rgb(220, 224, 224);width: 100px; padding: 5px;border: none;"
+            value="Log In">
+        {{/if}}
+
+    </form>
+
+</div>
+<script>
+    const userId=document.getElementById('email')
+    const userPass=document.getElementById('password')
+    const form=document.querySelector('form')
+
+    form.addEventListener('submit',validation)
+
+    function validation(e){
+        if(!emailReg.test(userId.value)){
+            e.preventDefault();
+            alert("Enter valid user name")
+        }
+    }
+    const emailReg = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$/
+</script>

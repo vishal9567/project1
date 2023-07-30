@@ -1,0 +1,69 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  
+  background-repeat: no-repeat;
+  /* background-color: rebeccapurple; */
+  background-attachment: fixed;
+  background-size: cover;
+  overflow: hidden;
+  /* background: url('/public/images/bgImage.webp'); */
+}
+.tag{
+  margin-top: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(237,219,117);
+}
+.maindiv{
+  height: 80vh;
+  /* background-color: red; */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+} 
+.containercss{
+  width: 280px;
+  height: 345px;
+  background-color: rgb(12, 11, 12);
+  border-radius: 10px;
+  text-align: center;
+  opacity: .8;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+.containercss img{
+  margin-top: 20px;
+}
+.insider{
+  margin: 30px 50px 20px 50px;
+  display: flex;
+  flex-direction: column;
+}
+.insider input{
+  padding: 8px;
+  border: none;
+  border-bottom: 1px solid rebeccapurple;
+  outline: none;
+  background: transparent;
+  color: aqua;
+}
+.homePage{
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.Atag{
+  background-color: red;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+}

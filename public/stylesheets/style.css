@@ -1,0 +1,94 @@
+/* body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: rgb(218, 173, 173);
+}
+
+
+p{
+  color: rgb(248, 57, 57);
+}
+.parentDiv{
+  width: 300px;
+}
+.maindiv{
+  background-color: black;
+  width: 320px;
+  height: 580px;
+} */
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+
+        background-repeat: no-repeat;
+        /* background-color: rebeccapurple; */
+        background-attachment: fixed;
+        background-size: cover;
+        overflow: hidden;
+        background-color: rgb(142, 151, 151);
+    }
+
+    .tag {
+        margin-top: 100px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(237, 219, 117);
+    }
+
+    .maindiv {
+        height: 80vh;
+        /* background-color: red; */
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .containerdiv {
+        width: 350px;
+        height: 500px;
+        background-color: black;
+        border-radius: 10px;
+        text-align: center;
+        opacity: .8;
+        border: 1px solid green;
+        margin-top: 80px;
+        /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    }
+
+    .insider {
+        margin: 50px 50px 20px 50px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .insider input {
+        padding: 8px;
+        border: none;
+        border-bottom: 1px solid rgb(245, 245, 245);
+        outline: none;
+        background: transparent;
+        color: aqua;
+    }
+
+    .homePage {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .Atag {
+        background-color: red;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 10px;
+    }

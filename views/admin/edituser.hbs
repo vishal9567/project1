@@ -1,0 +1,81 @@
+
+<div class="maindiv">
+    <form class="containerdiv" action="/admin/edit_user/{{UserData._id}}" method="POST" style="height: 410px;">
+        <legend class="mt-4 text-light">{{heading}}</legend>
+        <div class="insider">
+            <span><img src="/images/nameicon.png" alt=""> <input type="text" placeholder="First Name" name="first_name"
+                    id="first_name" value="{{UserData.first_name}}"></span>
+            <span><img src="/images/nameicon.png" alt=""> <input type="text" placeholder="Last Name" name="last_name"
+                    id="last_name" value="{{UserData.last_name}}"></span>
+            <span><img src="/images/gmail.png" alt=""> <input type="email" placeholder="Email Address" name="email"
+                    id="email" value="{{UserData.email}}"></span>
+            <span><img src="/images/gender.png" alt=""> <input type="text" placeholder="Gender" name="gender"
+                    id="gender" value="{{UserData.gender}}"></span>
+            <p class="text-danger" id="error"></p>
+
+        </div>
+        <div>
+            <input type="submit" value="UPDATE"
+                style="border-radius: 20px;font-weight: bold; background-color: #edf3fa;color: rgb(223, 43, 20);width: 230px; padding: 5px;border: none;"
+                >
+        </div>
+    </form>
+</div>
+<script>
+    const firstname=document.getElementById('first_name')
+    const lastname=document.getElementById('last_name')
+    const formid=document.querySelector('form')
+    const error=document.getElementById('error')
+    const email=document.getElementById('email')
+    const gender=document.getElementById('gender')
+
+    formid.addEventListener('submit',validate)
+
+    function validate(event){
+        if(!nameReg.test(firstname.value)){
+            if(firstname.value == ""){
+            event.preventDefault();
+            error.innerText="Enter the Name"
+            }
+            else{
+                event.preventDefault();
+                error.innerText="Name not valid"
+            }
+        }
+        
+        else if(!nameReg.test(lastname.value)){
+            if(lastname.value == ""){
+            event.preventDefault();
+            error.innerText="Enter last name"
+            }
+            else{
+                event.preventDefault();
+                error.innerText="last name not valid"
+            }
+        }
+        else if(!emailReg.test(email.value)){
+            if(email.value == ""){
+            event.preventDefault();
+            error.innerText="Enter email"
+            }
+            else{
+                event.preventDefault();
+                error.innerText="Email not valid"
+            }
+        }
+        else if(!genderReg.test(gender.value)){
+            if(gender.value == ""){
+            event.preventDefault();
+            error.innerText="Enter Gender"
+            }
+            else{
+                event.preventDefault();
+                error.innerText="Enter Male/Female"
+            }
+        }
+    }
+    const nameReg=/^[A-Z][a-z]?/
+    const emailReg=/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$/
+    const genderReg=/.*[Male].*[Female]/
+    {{!-- const passwordReg=/(?=.*[0-9])(?=.*[a-z]).{5,8}$/ --}}
+</script>

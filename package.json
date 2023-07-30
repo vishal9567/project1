@@ -1,0 +1,23 @@
+{
+  "name": "learning",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cookie-parser": "~1.4.4",
+    "datatables.net-dt": "^1.13.5",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "express-handlebars": "^7.0.7",
+    "express-session": "^1.17.3",
+    "hbs": "~4.0.4",
+    "http-errors": "~1.6.3",
+    "mongodb-legacy": "^5.0.0",
+    "morgan": "~1.9.1",
+    "nocache": "^4.0.0",
+    "nodemon": "^3.0.1"
+  }
+}

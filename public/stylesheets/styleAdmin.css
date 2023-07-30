@@ -1,0 +1,11 @@
+body{
+    
+    background-repeat: no-repeat;
+    /* background-color: rebeccapurple; */
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+  }
+.tableHead{
+    background-color: aqua;
+  }
